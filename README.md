@@ -14,6 +14,14 @@ The architecture consists of a,
 <img src="https://github.com/StevePerezUK/mesos-open/blob/master/architecture/mesos-architecture.png?raw=true" alt="Mesos" height="237" width="500">
 
 ## AWS Architecture
+AWS architecture is,
+- A single VPC
+- Three private subnets, each in thier own AZ
+- An internet facing load balancer
+- Three T3 medium instances giving 4GB Ram and 2 vCPU
+- EBS g2 SSD storage
+- Route 53 for external routing
+
 <img src="https://github.com/StevePerezUK/mesos-open/blob/master/architecture/aws-architecture.png?raw=true" alt="AWS Architecture" height="350" width="500">
 
 
