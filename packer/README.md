@@ -20,10 +20,24 @@
 - Download packer here - **https://www.packer.io/downloads/**
 - **If your workstation is running CentOS-7, there is another packer executeable in CentOS 7, if so rename it to packer.io**
 ## Update the template
-- In the mesos.json file update,
+- In the **mesos.json** file update,
 
 |Key | Description | Value|
 |---|---|---|
 | access_key | AWS Credential | As recored when you created the AWS user |
 | secret_key | AWS Credential | As recoreded when you created the AWS user |
+| region | AWS region | This is currently set to Ireland |
+| subnet_id | AWS Subnet | Use your default VPC subnet id | 
+
+## Run packer 
+Run the following in the packer directory, with the edited **mesos.json** file 
+
+'
+packer.io build mesos.json
+'
+
+
+
+
+
 
