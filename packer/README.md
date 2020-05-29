@@ -7,8 +7,10 @@
   - In the AWS console go to IAM roles and create a role, attach the packer-build-policy
   - Name the role packer-build-role
 - Create an AWS User
+
 ##If you are using an AWS instance in your account to do the build, you can assign the packer-build-role to the instance##
-  - Create a user, 
+ 
+ - Create a user, 
   - Name the user packer-build-user
   - Tick the programmatic access only
   - Attach the packer-build-role to the user
