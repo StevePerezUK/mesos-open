@@ -66,58 +66,49 @@
         {
             "type": "shell",
             "inline":[
-                "sudo mkdir -p /altihex/ansible",
-                "sudo chmod -R 700 /altihex/ansible"
+                "sudo mkdir -p /opt/ansible",
+                "sudo chmod -R 700 /opt/ansible"
             ]
         },
         {
   		"type": "file",
-  		"source": "./httpd.conf",
-  		"destination": "/tmp/httpd.conf"
-	},
-        {
-  		"type": "file",
-  		"source": "./altihex-build.sh",
-  		"destination": "/tmp/altihex-build.sh"
+  		"source": "./files/mesos-build.sh",
+  		"destination": "/tmp/mesos-build.sh"
 	},
 	{
   		"type": "file",
-  		"source": "./functions.sh",
+  		"source": "./files/functions.sh",
   		"destination": "/tmp/functions.sh"
 	},
 	{
   		"type": "file",
-  		"source": "./zookeeper_check.sh",
+  		"source": "./files/zookeeper_check.sh",
   		"destination": "/tmp/zookeeper_check"
 	},
 	{
   		"type": "file",
-  		"source": "./config-selinux",
+  		"source": "./files/config-selinux",
   		"destination": "/tmp/selinux-config"
-	},
-	{
-  		"type": "file",
-  		"source": "./telegraf-1.13.1-1.x86_64.rpm",
-  		"destination": "/tmp/telegraf-1.13.1-1.x86_64.rpm"
 	},
 	{
             "type": "shell",
             "inline":[
+		"sudo wget https://dl.influxdata.com/telegraf/releases/telegraf-1.13.1-1.x86_64.rpm  -O /tmp/telegraf-1.13.1-1.x86_64.rpm",
             	"sudo yum install -y /tmp/telegraf-1.13.1-1.x86_64.rpm",
             	"sudo mv /tmp/zookeeper_check /bin/zookeeper_check",
             	"sudo chmod 0700 /bin/zookeeper_check",
             	"sudo mv /tmp/httpd.conf /etc/httpd/conf/httpd.conf",
             	"sudo chown root:root /etc/httpd/conf/httpd.conf",
             	"sudo chmod 0644 /etc/httpd/conf/httpd.conf",
-            	"sudo cp /tmp/altihex-build.sh /altihex/ansible/altihex-build.sh",
-            	"sudo chown root:root /altihex/ansible/altihex-build.sh",
-                "sudo chmod 0700 /altihex/ansible/altihex-build.sh",
-                "sudo mv /tmp/functions.sh /altihex/ansible/functions.sh",
-            	"sudo chown root:root /altihex/ansible/functions.sh",
-                "sudo chmod 0700 /altihex/ansible/functions.sh",
-                "sudo mv /tmp/altihex-build.sh /bin/altihex-build",
-            	"sudo chown root:root /bin/altihex-build",
-                "sudo chmod 0700 /bin/altihex-build",
+            	"sudo cp /tmp/altihex-build.sh /opt/ansible/mesos-build.sh",
+            	"sudo chown root:root /opt/mesos/mesos-build.sh",
+                "sudo chmod 0700 /opt/ansible/mesos-build.sh",
+                "sudo mv /tmp/functions.sh /opt/ansible/functions.sh",
+            	"sudo chown root:root /opt/ansible/functions.sh",
+                "sudo chmod 0700 /opt/ansible/functions.sh",
+                "sudo mv /tmp/mesos-build.sh /bin/mesos-build",
+            	"sudo chown root:root /bin/mesos-build",
+                "sudo chmod 0700 /bin/mesos-build",
                 "sudo mv /tmp/selinux-config /etc/selinux/config",
                 "sudo chown root:root /etc/selinux/config",
                 "sudo chmod 0644 /etc/selinux/config",
