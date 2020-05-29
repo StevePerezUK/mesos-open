@@ -21,6 +21,7 @@
 - **If your workstation is running CentOS-7, there is another packer executeable in CentOS 7, if so rename it to packer.io**
 ## Update the template
 - In the mesos.json file update,
+
 |Key | Description | Value|
 |---|---|---|
 | access_key | AWS Credential | As recored when you created the AWS user |
