@@ -12,7 +12,7 @@
     "encrypt_boot" : true,
     "launch_block_device_mappings": [
     	{
-      	"device_name": "/dev/sda1",
+        "device_name": "/dev/sda1",
       	"volume_size": 10,
       	"volume_type": "gp2",
       	"delete_on_termination": true
@@ -71,36 +71,36 @@
             ]
         },
         {
-  			"type": "file",
-  			"source": "./httpd.conf",
-  			"destination": "/tmp/httpd.conf"
-		},
+  		"type": "file",
+  		"source": "./httpd.conf",
+  		"destination": "/tmp/httpd.conf"
+	},
         {
-  			"type": "file",
-  			"source": "./altihex-build.sh",
-  			"destination": "/tmp/altihex-build.sh"
-		},
-		{
-  			"type": "file",
-  			"source": "./functions.sh",
-  			"destination": "/tmp/functions.sh"
-		},
-		{
-  			"type": "file",
-  			"source": "./zookeeper_check.sh",
-  			"destination": "/tmp/zookeeper_check"
-		},
-		{
-  			"type": "file",
-  			"source": "./config-selinux",
-  			"destination": "/tmp/selinux-config"
-		},
-		{
-  			"type": "file",
-  			"source": "./telegraf-1.13.1-1.x86_64.rpm",
-  			"destination": "/tmp/telegraf-1.13.1-1.x86_64.rpm"
-		},
-		{
+  		"type": "file",
+  		"source": "./altihex-build.sh",
+  		"destination": "/tmp/altihex-build.sh"
+	},
+	{
+  		"type": "file",
+  		"source": "./functions.sh",
+  		"destination": "/tmp/functions.sh"
+	},
+	{
+  		"type": "file",
+  		"source": "./zookeeper_check.sh",
+  		"destination": "/tmp/zookeeper_check"
+	},
+	{
+  		"type": "file",
+  		"source": "./config-selinux",
+  		"destination": "/tmp/selinux-config"
+	},
+	{
+  		"type": "file",
+  		"source": "./telegraf-1.13.1-1.x86_64.rpm",
+  		"destination": "/tmp/telegraf-1.13.1-1.x86_64.rpm"
+	},
+	{
             "type": "shell",
             "inline":[
             	"sudo yum install -y /tmp/telegraf-1.13.1-1.x86_64.rpm",
