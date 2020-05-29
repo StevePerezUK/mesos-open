@@ -33,5 +33,12 @@ AWS architecture is,
 - terraform
 - ansible
 
+## Build Sequence 
+### Create an AMI using packer 
+Goto the packer directory and follow the README to create 
+### Create the AWS VPC 
+Goto the terraform directory and follow the README to create
+### Create the mesos cluster
+Goto to the ansible directory and follow the README to create
 
 
