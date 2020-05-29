@@ -18,7 +18,8 @@
   - Record the Access key and Secret key - You will need this to put into the packer tempate
 ## Install Packer on your build machine
 - Download packer here - **https://www.packer.io/downloads/**
-- install it, yum install -y **name-of-packer.rpm** 
+- install it by unzipping the download, there will be a single executable.
+- copy the packer executeable to your /bin directory
 - **If your workstation is running CentOS-7, there is another packer executeable in CentOS 7, if so rename it to packer.io**
 ## Update the template
 - In the **mesos.json** file update,
