@@ -32,9 +32,11 @@
 ## Run packer 
 Run the following in the packer directory, with the edited **mesos.json** file 
 
-'
+`
 packer.io build mesos.json
-'
+`
+This will create a new AMI. This will take about 15 minutes to complete so be patient. 
+
 
 
 
