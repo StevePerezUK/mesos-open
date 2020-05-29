@@ -8,7 +8,7 @@
   - Name the role **packer-build-role**
 - Create an AWS User
 
-**If you are using an AWS instance in your account to do the build, you can assign the packer-build-role to the instance and skip this step**
+**If you are using an AWS instance to do the build, you can assign the packer-build-role to the instance and skip this step**
 
 - Create a user, 
   - Name the user **packer-build-user**
@@ -20,4 +20,9 @@
 - Download packer here - **https://www.packer.io/downloads/**
 - **If your workstation is running CentOS-7, there is another packer executeable in CentOS 7, if so rename it to packer.io**
 ## Update the template
-- 
+- In the mesos.json file update,
+|Key | Description | Value|
+|---|---|---|
+| access_key | AWS Credential | As recored when you created the AWS user |
+| secret_key | AWS Credential | As recoreded when you created the AWS user |
+
